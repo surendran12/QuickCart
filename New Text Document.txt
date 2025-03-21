@@ -1,0 +1,52 @@
+https://www.youtube.com/watch?v=nxK_TCt2pKw
+
+Backend Integration
+step1
+clerk.com
+Authentication login and login in menu
+
+step2 - config folder
+config file added in mongodb
+npm i mongoose
+
+create new project
+and
+create Cluster
+username: surendransns
+pwd: Surendran@1985#
+
+cluster url added in .env
+
+config file db.js added
+
+step3 - models folder
+added in Api
+
+step4 -goto clerk.com
+configure -> 
+Webhooks is manual
+
+use this -> inngest
+name: surendransns
+Slug: surendran
+-> production : event keys -> click default ingest key copy and paste env file INNGEST_EVENT_KEY
+and
+-> production : signin keys -> click default ingest key copy and paste env file INNGEST_SIGNING_KEY
+npm install ingest
+
+and
+
+go apps -> click nextjs -> nextjs-App-Router
+-> create an ingest Client ->  go to config folder create 
+ingest file and paste client.ts code
+
+and 
+
+clerk.com
+go to webooks -> endpoints -> ingest -> connect to ingest and approve 
+and go to bottom create -> testing -> selected an event type and added to ingest.js file event: clerk/user.created
+and schema data added in ingest file async function inside
+
+		
+
+
